@@ -1,11 +1,9 @@
 <h3> In servers Componenet</h3>
 
 <label>Server Name</label>
-<input type="text" [(ngModel)]="serverName" class="form-control">
-<p>{{serverName}}</p>
+<input type="text" [(ngModel)]="serverName" >
+<button class="btn btn-primary" (click)="onCreateServer()">Add Server</button>
 
-<button [disabled]="disable" class="btn btn-primary" (click)="ChangeServerName()">Change SErver NAme</button>
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 
-<!-- <app-server></app-server>
-<app-server></app-server>
-<app-server></app-server> -->
+<app-server *ngFor="let server of servers"></app-server>

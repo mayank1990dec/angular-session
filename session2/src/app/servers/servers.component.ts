@@ -13,11 +13,14 @@ export class ServersComponent implements OnInit {
   }
 
   serverName = "Test Server"
-  disable = false
+  serverCreated = false
 
-  ChangeServerName(){
-    this.serverName ="Name CHanged";
-    this.disable = true;
+  servers = [];
+  serverCreationStatus = 'No server was created!';
+
+  onCreateServer() {
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
-
 }
