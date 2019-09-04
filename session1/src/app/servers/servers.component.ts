@@ -12,4 +12,12 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  serverName = "Test Server"
+  disable = false
+
+  ChangeServerName(){
+    this.serverName ="Name CHanged";
+    this.disable = true;
+  }
+
 }
